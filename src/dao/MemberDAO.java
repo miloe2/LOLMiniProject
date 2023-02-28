@@ -1,11 +1,12 @@
 package dao;
 
-        import util.Common;
-        import vo.MemberVO;
-        import java.sql.*;
-        import java.util.ArrayList;
-        import java.util.List;
-        import java.util.Scanner;
+import util.Common;
+import vo.MemberVO;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 public class MemberDAO {
     Connection conn = null; // 자바와 오라클에 대한 연결 설정
@@ -49,11 +50,11 @@ public class MemberDAO {
             String sql = "SELECT ID,PWD FROM USER_INFO";
             rs = stmt.executeQuery(sql); // select 문과 같이 여러개의 레코드(행)으로 결과가 반환될 때 사용
             System.out.print("아이디를 입력하세요 : ");
-            String id = sc.next();
+            Singleton id = Singleton.getSingleton();
             System.out.print("비밀번호를 입력하세요 : ");
             String pwd = sc.next();
             while(rs.next()) {
-                if(id.equals(rs.getString("ID"))){
+                if(id.getId().equals(rs.getString("ID"))){
                     if(pwd.equals(rs.getString("PWD"))){
                         return "성공";
                     }

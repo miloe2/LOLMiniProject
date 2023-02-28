@@ -2,12 +2,13 @@ package dao;
 
 import util.Common;
 import vo.LoLChamVO;
+import vo.MemberVO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -51,17 +52,27 @@ public class LoLChamDAO {
         }
     }
 
-    public void LoLChamInsert() {
-        System.out.println("구매하실 챔피언 이름을 입력해 주세요 : ");
+//    MemberDAO dao = new MemberDAO();
+//    List<MemberVO> list = dao.memberSelect();
+//    String currentID = dao.lolLogin(list);
+
+
+    public void LoLChamInsert() throws SQLException {
+                System.out.println("구매하실 챔피언 이름을 입력해 주세요 : ");
         String ChamBuyName = sc.next();
         String sql = "INSERT INTO CHAMPION_BUY SELECT * FROM CHAMPION WHERE CHP_NAME = " + "'"+ ChamBuyName + "'";
         System.out.println(ChamBuyName+"을 구입 완료 했습니다.");
+        Singleton id = Singleton.getSingleton();
+        System.out.println(id.getId());
+//        String sql2 = "INSERT INTO CHAMPION_BUY (ID) VALUES(" + currentID +")" + "WHERE CHP_NAME = " + "'"+ ChamBuyName + "'";
+//
 
         try {
             conn =  Common.getConnection();
             stmt = conn.createStatement();
             int ret = stmt.executeUpdate(sql); // 영향을 받는 값이 1개이므로 1이 들어온다.
-            System.out.println("Return : " + ret);
+//            int ret2 = stmt.executeUpdate(sql2); // 영향을 받는 값이 1개이므로 1이 들어온다.
+            System.out.println("Return : "+ ret);
         } catch (Exception e) {
             e.printStackTrace();
         }

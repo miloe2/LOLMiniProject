@@ -1,5 +1,7 @@
 package vo;
 
+import java.util.Date;
+
 public class LoLChamVO {
     private String chp_name;
     private int chp_price;
