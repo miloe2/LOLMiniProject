@@ -40,7 +40,7 @@ public class JdbcMain {
                     }
                     break;
                 case 2:
-                    userDao.userInfoInsert();
+                    userDao.userInfoInsert1();
                     break;
                 case 3:
                     System.out.println("종료");
