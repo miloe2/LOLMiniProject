@@ -1,4 +1,4 @@
-package dao;
+package jdbc.dao;
 
 import java.util.Scanner;
 

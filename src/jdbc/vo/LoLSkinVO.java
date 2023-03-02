@@ -1,4 +1,4 @@
-package vo;
+package jdbc.vo;
 
 public class LoLSkinVO {
     private String chp_name;

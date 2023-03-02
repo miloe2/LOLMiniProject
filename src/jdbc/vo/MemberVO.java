@@ -1,4 +1,4 @@
-package vo;
+package jdbc.vo;
 
 import java.sql.Date;
 
@@ -13,8 +13,6 @@ public class MemberVO {
     private int buyGold;
     private String rank;
 
-
-
     public MemberVO(String id, String pwd, String email, String nickName, Date birthDay, int phNumber, int gold, int buyGold, String rank) {
         this.id = id;
         this.pwd = pwd;
@@ -26,9 +24,6 @@ public class MemberVO {
         this.buyGold = buyGold;
         this.rank = rank;
     }
-    public MemberVO(){
-    }
-
 
     public String getId() {
         return id;

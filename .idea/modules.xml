@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LOLMiniProject.iml" filepath="$PROJECT_DIR$/LOLMiniProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JbdcMain.iml" filepath="$PROJECT_DIR$/JbdcMain.iml" />
     </modules>
   </component>
 </project>
