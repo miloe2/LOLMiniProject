@@ -1,5 +1,6 @@
 package jdbc;
 
+import jdbc.dao.GameDAO;
 import jdbc.dao.LoLChamDAO;
 import jdbc.dao.LoLSkinDAO;
 import jdbc.dao.MemberDAO;
@@ -60,6 +61,8 @@ public class JdbcMain {
                     switch (sel2) {
                         case 1:
                             System.out.println("게임을 시작합니다.");
+                            GameDAO gameDAO = new GameDAO();
+                            gameDAO.WinLose();
 
                             break;
                         case 2:

@@ -52,4 +52,26 @@ public class Common {
             e.printStackTrace();
         }
     }
+    public static void commit(Connection conn) {
+        try {
+            if(conn != null && !conn.isClosed()) {
+                conn.commit();
+                System.out.println("커밋 완료");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void rollback(Connection conn) {
+        try {
+            if(conn != null && !conn.isClosed()) {
+                conn.rollback();
+                System.out.println("롤백 완료");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

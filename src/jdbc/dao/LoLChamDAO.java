@@ -59,6 +59,7 @@ public class LoLChamDAO {
         List<LoLChamVO> list2 = new ArrayList<>();
         System.out.println("구매하실 챔피언 이름을 입력해 주세요 : ");
         String ChamBuyName = sc.next();
+
         try {
             conn = Common.getConnection(); // 연결을 가져옴
             stmt = conn.createStatement(); // stmt 에 쿼리문을 담아서 가져옴
